@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Customer</title>
+</head>
+<body>
+<h2>Add Customer </h2>
+<br/>
+<br/>
+<br/>
+
+<form method="post" action="/customer/addCustomer">
+    <table border=0 >
+        <tr><td align="right">User Name:</td><td align="left"><input type="text" name="userName" size="50"></input></td></tr>
+        <tr><td align="right">Password:</td><td align="left"><input type="password" name="password" size="50"></input></td></tr>
+        <tr><td align="right">Email:</td><td align="left"><input type="text" name="email" size="50"></input></td></tr>
+        <tr><td align="right">Title:</td><td align="left"><input type="text" name="title" size="50"></input></td></tr>
+        <tr><td align="right">Sex:</td><td align="left"><input type="radio" name="sex" value="male"> Male<input type="radio" name="sex" value="female"> Female</td></tr>
+        <tr><td align="right">Salary:</td><td align="left"><input type="text" name="salary" size="50"></input></td></tr>
+        <tr><td align="right">Age:</td><td align="left"><input type="text" name="age" size="50"></input></td></tr>
+        <tr><td align="right"></td><td align="left"><input type="submit"></input></td></tr>
+    </table>
+</form>
+
+</body>
+</html>

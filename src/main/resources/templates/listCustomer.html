@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Customer</title>
+</head>
+<body>
+<h2>Customer List</h2>
+
+<a th:href="@{'/customer/addCustomerPage'}">Add Customer</a>
+
+<br/>
+
+<table th:if="${ not #lists.isEmpty(customers) }" border=1>
+    <tr>
+        <td>User Name</td>
+        <td>Password</td>
+        <td>Email</td>
+        <td>Title</td>
+        <td>Sex</td>
+        <td>Salary</td>
+        <td>Age</td>
+    </tr>
+    <tr th:each="customer : ${customers}">
+        <td th:text="${customer.userName}"></td>
+        <td th:text="${customer.password}"></td>
+        <td th:text="${customer.email}"></td>
+        <td th:text="${customer.title}"></td>
+        <td th:text="${customer.sex}"></td>
+        <td th:text="${customer.salary}"></td>
+        <td th:text="${customer.age}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
